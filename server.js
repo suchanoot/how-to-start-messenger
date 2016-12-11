@@ -24,8 +24,8 @@ app.post('/webhook/', function (req, res) {
     let sender = event.sender.id
     if (event.message && event.message.text) {
       let text = event.message.text
-      var location = event.message.text
-      var weatherEndpoint = 'http://api.openweathermap.org/data/2.5/weather?q=' +location+ '6d5ab37f978f62e9abb3ca96121d6b2e'
+        var location = event.message.text
+      var weatherEndpoint = 'http://api.openweathermap.org/data/2.5/weather?q=' +location+ '&units=metric&appid=ea5272e74853f242bc0efa9fef3dd9f3'
       request({
         url: weatherEndpoint,
         json: true
