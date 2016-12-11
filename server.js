@@ -42,7 +42,7 @@ app.post('/webhook/', function (req, res) {
         sendGenericMessage(sender)
         continue
       }
-      sendTextMessage(sender, 'พยากรณ์อากาศให้คุณ' + text.substring(0, 200))
+      sendTextMessage(sender, '*** พยากรณ์อากาศให้คุณ ที่ ' + text.substring(0, 200) + ' ****')
     }
     if (event.postback) {
       let text = JSON.stringify(event.postback)
