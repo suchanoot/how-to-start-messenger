@@ -4,7 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
-const token = 'EAADsUgsaoTcBANhORqWNkhboDhyO14ZBvzlmHKcZAZBSo1zEmuOoIDrE2h9cFv9pu73T999TpQSDQL7ZB9IGiX21iupmXxU9drcl1KXzqxu6UzWpI0u0xEyUXpaPqeWXkLSZBnT9VsDPqttKzZAINw1gdvnlo61kYejd2xwBZB2ZBgZDZD'
+const token = 'EAADsUgsaoTcBAM2J0GabJGi1KZACIfV00xJoTZBLhEYMOC64GYa7mJZA5zGHrowmyHm6JUntkfaOBn1ZB2aSVhnYBRQ6wj9eGKxbz7HbMX9THWx33Cy1Bo38MfvwkLNGwaCNBhH5bbhbZBSzRzvPdGg0LlK70JuEbwQwDjqKrsAZDZD'
 app.set('port', (process.env.PORT || 5000))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
@@ -28,7 +28,7 @@ app.post('/webhook/', function (req, res) {
         sendGenericMessage(sender)
         continue
       }
-      sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
+      sendTextMessage(sender, 'คุณต้องการรู้สภาพอากาศไหม <botton>yes</button> ' + text.substring(0, 200))
     }
     if (event.postback) {
       let text = JSON.stringify(event.postback)
