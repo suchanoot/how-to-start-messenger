@@ -36,7 +36,7 @@ app.post('/webhook/', function (req, res) {
           sendTextMessage(sender, "วันนี้ สภาพอากาศที่ " + location + " ในประเทศ " + country.country + " มีอุณหภูมิ " + condition.temp + " องศาเซลเซียส");
         } catch(err) {
           console.error('error caught', err);
-          sendTextMessage(sender, 'เราไม่เจอสถานที่ ' + text.substring(0, 200) + ' ที่คุณต้องการ!!');
+          sendTextMessage(sender, 'เราไม่เจอสถานที่ ' + text.substring(0, 200) + ' ที่คุณต้องการ!! (กรุณาสถานที่เป็นภาษาอังกฤษ)');
         }
       })
       if (text === 'Generic') {
